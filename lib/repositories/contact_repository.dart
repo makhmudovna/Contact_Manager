@@ -15,7 +15,7 @@ class ContactRepository {
        name TEXT,
        email TEXT,
        phone TEXT,
-       adress TEXT
+       address TEXT
        )''');
 
       //insert some initial rows
@@ -23,14 +23,14 @@ class ContactRepository {
         'name': 'John Smith',
         'email': 'john@gmail.com',
         'phone': '12345678',
-        'adress': 'New York'
+        'address': 'New York'
       });
 
       await db.insert('contacts', {
         'name': 'Bob Smith',
         'email': 'bob@gmail.com',
         'phone': '87654321',
-        'adress': 'Miami, USA'
+        'address': 'Miami, USA'
       });
     });
 

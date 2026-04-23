@@ -1,4 +1,4 @@
-import 'package:contact_manager/pages/home_page.dart';
+import 'package:contact_manager/pages/contact_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,9 +10,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       title: 'Flutter Demo',
-      home: const HomePage(),
+      home: ContactPage(),
     );
   }
 }
