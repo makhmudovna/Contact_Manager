@@ -3,11 +3,13 @@ import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';
 
 class ContactRepository {
+  static Database? _db;
+
   static Future<Database> _getDatabase() async {
+    if (_db != null) return _db!; //singleton pattern
+
     final dbPath = await getDatabasesPath();
     final path = join(dbPath, 'contact_manager.db');
-
-    await deleteDatabase(path);
 
     final database = await openDatabase(
       path,
